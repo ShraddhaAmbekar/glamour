@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Glamourlite</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- AOS Library for Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+   <style>
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     
+        color: #fff;
+    }
+    body{
+        background-color: #1f1f1f;
+    }
+
+    .navbar {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+
+    /* Parallax Hero Section */
+    .parallax {
+        background-image: url('https://i.pinimg.com/originals/18/a0/c9/18a0c9e641a393bcf1a4bcd548544adc.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .parallax h1 {
+        font-size: 72px;
+        color: #fff;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    .parallax-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Section Styling */
+    .section {
+        padding: 80px 10%;
+        text-align: center;
+        background-color: #252525;
+    }
+
+    .section h2 {
+        font-size: 36px;
+        color: #eaaecf;
+        margin-bottom: 20px;
+    }
+
+    .section p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #ddd;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* Awards Section */
+    .awards-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .award-card {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .award-card:hover {
+        transform: scale(1.05);
+    }
+
+    .award-card h3 {
+        color: #eaaecf;
+        margin-bottom: 10px;
+    }
+
+    .award-card ul {
+        list-style-type: none;
+        color: #b0b0b0;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #111;
+    }
+   </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/" alt="Logo" width="120"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/salon.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/academy.html">Academy</a></li>
+                 <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Parallax Section -->
+    <section class="parallax" data-aos="zoom-in">
+        <div class="parallax-overlay"></div>
+        <h1 class="parallax-title">About Us</h1>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section" id="story" data-aos="fade-up">
+        <h2>Our Story</h2>
+        <p>Glamourlite is one of the fastest-growing and most renowned salon chains, setting a new standard for hairstyling and beauty services. We pride ourselves on offering luxury, style, and a personalized experience to every client.</p>
+    </section>
+
+    <!-- History Section -->
+    <section class="section bg-dark" id="history" data-aos="fade-up">
+        <h2>History of Glamourlite</h2>
+        <p>Founded in 1989, Glamourlite started as a single salon and has grown into a Pan-India chain. We now operate over 200 locations across the country and employ more than 6000 professionals.</p>
+    </section>
+
+    <!-- Vision & Promise Section in One Row -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- Vision -->
+                <div class="col-md-6" data-aos="fade-right">
+                    <h2>Corporate Vision</h2>
+                    <p>Our vision is to provide an unparalleled salon experience by combining top-tier beauty services with a relaxing, luxurious environment. We strive to create moments of beauty that leave our clients feeling rejuvenated and fabulous.</p>
+                </div>
+
+                <!-- Promise -->
+                <div class="col-md-6" data-aos="fade-left">
+                    <h2>Customer Promise</h2>
+                    <p>We are committed to offering personalized services with precision and care. Every visit promises expert hairstyling, skincare, and beauty services in a calm and luxurious setting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="section" id="awards" data-aos="fade-up">
+        <h2>Awards & Recognitions</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="award-card" data-aos="flip-left">
+                        <h3>Indian Hairdressing Awards</h3>
+                        <ul>
+                            <li>Best Salon Chain – North</li>
+                            <li>Best Salon Design – North</li>
+                            <li>Young Colorist – Runners Up</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="award-card" data-aos="flip-right">
+                        <h3>L'Oreal Awards</h3>
+                        <ul>
+                            <li>Men's Image Winner – 2011-12</li>
+                            <li>Color Trophy Winners – 2008-09</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="award-card" data-aos="flip-up">
+                        <h3>Regional Salon Chain of the Year</h3>
+                        <ul>
+                            <li>2013-14, 2014-15, 2015-16</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-5" style="background: #1f1f1f; color: white;">
+        <div class="container">
+            <div class="row">
+                <!-- Brand Info -->
+                <div class="col-md-4 mb-4">
+                    <h4 style="color: #eaaecf;">Glamourlite</h4>
+                    <p>Enhancing beauty with professional expertise.</p>
+                    <img src="glamourlite-logo.png" alt="Logo" width="120">
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #eaaecf;">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/glamourlite.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="/about.html" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="/services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="/contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-4 mb-4">
+                    <h5 style="color: #eaaecf;">Follow Us</h5>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(234, 174, 207, 0.5);">
+            <p class="mb-0">&copy; 2025 Glamourlite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS animations
+    </script>
+
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+
+</body>
+</html>

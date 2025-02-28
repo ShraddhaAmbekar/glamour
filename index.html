@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamourlite - Makeover Academy & Salon</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+         
+            color: white;
+        }
+
+         /* Background Animation */
+         .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(45deg, rgba(234, 174, 207, 0.1), rgba(0, 0, 0, 0.9));
+            z-index: -1;
+            animation: bgMove 10s infinite alternate linear;
+        }
+        @keyframes bgMove {
+            0% { background-position: left top; }
+            100% { background-position: right bottom; }
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #eaaecf;
+        }
+        .hero {
+            height: 100vh;
+            background: url('https://wallpaperaccess.com/full/1190748.jpg') no-repeat center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 5;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: white;
+        }
+        .hero span {
+            color: #eaaecf;
+        }
+        .btn-custom {
+            background: #eaaecf;
+            color: black;
+            border-radius: 5px;
+        }
+        .btn-custom:hover {
+            background: #87CEEB;
+        }
+       /* Services Section */
+       .courses {
+        text-align: center;
+        padding: 80px 20px;
+        position: relative;
+        z-index: 2;
+    }
+        .courses h2 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+    .course-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .course-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 280px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .course-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+    .course-card i {
+        font-size: 40px;
+        margin-bottom: 15px;
+        color: #eaaecf;
+    }
+    .course-card h3 {
+        font-size: 1.5rem;
+    }
+   
+/* Appointment Section */
+
+.appointment-section {
+   /* background: url('https://cdn.wallpapersafari.com/66/13/xbkgOi.jpg') no-repeat center;*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    position: relative;
+    color: white;
+}
+
+/* Dark Overlay */
+.appointment-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+/* Appointment Container */
+.appointment-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Left Side Content */
+.appointment-left {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+}
+
+.appointment-left h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #eaaecf;
+}
+
+.appointment-left h2 span {
+    color: #87CEEB;
+}
+
+.appointment-left p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.call-action {
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+.call-btn {
+    background: #eaaecf;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.call-btn:hover {
+    background: #87CEEB;
+}
+
+/* Right Side Form */
+.appointment-form-container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+
+/* Form Elements */
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group select {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: black; /* Ensures text color is black */
+}
+
+/* Make placeholder text black */
+.input-group input::placeholder,
+.input-group select::placeholder {
+    color: black !important;
+    opacity: 1; /* Ensures full opacity */
+}
+
+
+/* Book Button */
+.book-btn {
+    background: #eaaecf;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.book-btn:hover {
+    background: #87CEEB;
+}
+
+    /* Scroll Animations */
+    .animated-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+    }
+
+    .animated-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /*gallery*/
+    #gallery {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+    }
+    
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+    
+    .gallery-item .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .gallery-item:hover .overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    
+/*brand*/
+.brand-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+
+
+/* Brand Slider */
+.brand-slider {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Track - Scrolling Effect */
+.brand-track {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    animation: scroll 15s linear infinite;
+    width: calc(160px * 24); /* Adjust based on logo width */
+}
+
+/* Brand Logo */
+.brand-logo {
+    flex: 0 0 auto;
+    width: 160px; /* Adjust size */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.brand-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Brand Logo Image */
+.brand-logo img {
+    width: 80%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+/* Remove Grayscale on Hover */
+.brand-logo:hover img {
+    filter: grayscale(0%);
+}
+
+/* Infinite Scrolling Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Moves only half, so the loop is seamless */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brand-section h2 {
+        font-size: 2rem;
+    }
+    .brand-logo {
+        width: 120px;
+        height: 70px;
+    }
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="background"></div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="Glamourlite.png" alt="Logo" width="120"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex justify-content-center align-items-center text-center">
+        <div class="hero-content">
+            <h1>Welcome to <span>Glamourlite</span></h1>
+            <p>Where beauty meets perfection.</p>
+            <a href="/services" class="call-btn">Explore Services</a>
+        </div>
+    </section>
+ 
+    <!-- About Section -->
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Glamourlite Makeover Academy & Salon is dedicated to providing world-class beauty and styling education.</p>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="courses" class="courses">
+        <h2 data-aos="fade-up">Discover Your Art</h2>
+        <div class="course-container">
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-palette-fill"></i>
+                <h3>Makeup</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-droplet-fill"></i>
+                <h3>Chemical Works</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-patch-plus-fill"></i>
+
+                <h3>Lobe Repair</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-scissors"></i>
+                <h3>Hair Dressing</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-scissors"></i>
+                <h3>Hairstyle</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-brush-fill"></i>
+                <h3>Nail Art</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-grip-horizontal"></i>
+                <h3>Extension</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-eye-fill"></i>
+                <h3>Eyelash Extension</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-person-fill"></i>
+                <h3>Cosmetology</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-award-fill"></i>
+                <h3>Master Course</h3>
+            </div>
+            <div class="course-card" data-aos="zoom-in">
+                <i class="bi bi-hand-index-thumb"></i>
+                <h3>Mehndi</h3>
+            </div>
+        </div>
+    </section>
+    <!-- appointment section -->
+    <section id="appointment" class="appointment-section">
+        <div class="appointment-container">
+            <!-- Left Section: Engaging Visuals -->
+            <div class="appointment-left">
+                <h2 data-aos="fade-up">Let's not wait for the <span>"Perfect Look"</span></h2>
+                <p data-aos="fade-up" data-aos-delay="200">Book Your Appointment Today & Transform Your Style!</p>
+                <div class="call-action" data-aos="fade-up" data-aos-delay="400">
+                    <p>OR Call Us Now</p>
+                    <a href="tel:+180021256657" class="call-btn">1800 212 56657</a>
+                </div>
+            </div>
+    
+            <!-- Right Section: Form -->
+            <div class="appointment-form-container">
+                <form class="appointment-form" data-aos="fade-left">
+                    <div class="input-group">
+                        <input type="text" placeholder="Name*" required>
+                        <input type="text" placeholder="Contact*" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email ID">
+                        <input type="text" placeholder="City*" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Location*" required>
+                        <select required>
+                            <option value="">Gender*</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <select required>
+                            <option value="">Service Type*</option>
+                            <option value="makeup">Makeup</option>
+                            <option value="hair">Hair Dressing</option>
+                            <option value="nailart">Nail Art</option>
+                            <option value="cosmetology">Cosmetology</option>
+                        </select>
+                        <input type="date" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="time" required>
+                        <select required>
+                            <option value="">AM/PM</option>
+                            <option value="am">AM</option>
+                            <option value="pm">PM</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="book-btn">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- brand section -->
+<section id="brands" class="brand-section">
+    <h2 data-aos="fade-up">Our Trusted Brands</h2>
+    <div class="brand-slider">
+        <div class="brand-track">
+            <!-- Original Set of 12 Brands -->
+            <div class="brand-logo"><img src="brand1.png" alt="Brand 1"></div>
+            <div class="brand-logo"><img src="brand2.png" alt="Brand 2"></div>
+            <div class="brand-logo"><img src="brand3.png" alt="Brand 3"></div>
+            <div class="brand-logo"><img src="brand4.png" alt="Brand 4"></div>
+            <div class="brand-logo"><img src="brand5.png" alt="Brand 5"></div>
+            <div class="brand-logo"><img src="brand6.png" alt="Brand 6"></div>
+            <div class="brand-logo"><img src="brand7.png" alt="Brand 7"></div>
+            <div class="brand-logo"><img src="brand8.png" alt="Brand 8"></div>
+            <div class="brand-logo"><img src="brand9.png" alt="Brand 9"></div>
+            <div class="brand-logo"><img src="brand10.png" alt="Brand 10"></div>
+            <div class="brand-logo"><img src="brand11.png" alt="Brand 11"></div>
+            <div class="brand-logo"><img src="brand12.png" alt="Brand 12"></div>
+
+          
+    </div>
+</section>
+
+      <!-- Footer Section -->
+<footer class="text-center py-5" style="background: #1f1f1f; color: white;">
+    <div class="container">
+        <div class="row">
+            <!-- Brand Info -->
+            <div class="col-md-4 mb-4">
+                <h4 style="color: #eaaecf;">Glamourlite</h4>
+                <p>Enhancing beauty with professional expertise.</p>
+                <img src="Glamourlite.png" alt="Logo" width="120">
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5 style="color: #eaaecf;">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                    <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-4 mb-4">
+                <h5 style="color: #eaaecf;">Follow Us</h5>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr style="border-color: rgba(234, 174, 207, 0.5);">
+        <p class="mb-0">&copy; 2025 Glamourlite. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+
+     <script>
+        gsap.from(".appointment-left h2", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
+        gsap.from(".appointment-left p", { opacity: 0, y: 50, duration: 1, delay: 0.5, ease: "power3.out" });
+        gsap.from(".appointment-form", { opacity: 0, x: 100, duration: 1, delay: 0.8, ease: "power3.out" });
+        gsap.from(".book-btn", { opacity: 0, scale: 0.8, duration: 0.8, delay: 1.2, ease: "power3.out" });
+        
+        gsap.to(".brand-track", {
+            x: "-50%", 
+            duration: 12, 
+            repeat: -1, 
+            ease: "linear"
+        });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        
+
+        
+        AOS.init();
+    </script>
+</body>
+</html>
