@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glamourlite - Makeover Academy & Salon</title>
-    
-    <!-- Bootstrap CSS -->
+    <title>Admissions Section</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- AOS Library for Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-         
+            font-family: 'Roboto', sans-serif;
+            background: black;
             color: white;
         }
 
-         /* Background Animation */
-         .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(45deg, rgba(234, 174, 207, 0.1), rgba(0, 0, 0, 0.9));
-            z-index: -1;
-            animation: bgMove 10s infinite alternate linear;
-        }
-        @keyframes bgMove {
-            0% { background-position: left top; }
-            100% { background-position: right bottom; }
-        }
         .navbar {
-            background: rgba(0, 0, 0, 0.8);
+            background-color: rgb(0, 0, 0, 0.8);
         }
-        section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #eaaecf;
-        }
+
         .hero {
             height: 100vh;
-            background: url('https://wallpaperaccess.com/full/1190748.jpg') no-repeat center;
-            background-size: cover;
+            background: url("Glamourlite/2.png") no-repeat center center/cover;
+            position: relative;
             display: flex;
             align-items: center;
-            text-align: center;
-            position: relative;
+            padding: 60px 0px;
         }
+
         .hero::before {
             content: "";
             position: absolute;
@@ -61,578 +46,979 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.6);/
         }
-        .hero-content {
-            position: relative;
-            z-index: 5;
-        }
-        .hero h1 {
-            font-size: 3rem;
+
+        .text-section {
             color: white;
+            position: relative;
+            font-size: 84px;
+            font-weight: 500;
+            line-height: 64px;
         }
-        .hero span {
-            color: #eaaecf;
+
+        .text-1 {
+            font-weight: 400;
+            font-size: 84px;
+            line-height: 48px;
         }
-        .btn-custom {
-            background: #eaaecf;
-            color: black;
-            border-radius: 5px;
+
+        .text-2 {
+            font-weight: 200;
+            font-size: 84px;
+            line-height: 48px;
         }
-        .btn-custom:hover {
-            background: #87CEEB;
+
+        .learn-more {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 300;
+            margin-top: 20px;
+            text-transform: uppercase;
         }
-       /* Services Section */
-       .courses {
-        text-align: center;
-        padding: 80px 20px;
-        position: relative;
-        z-index: 2;
-    }
-        .courses h2 {
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-    }
-    .course-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .course-card {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        width: 280px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .course-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    }
-    .course-card i {
-        font-size: 40px;
-        margin-bottom: 15px;
-        color: #eaaecf;
-    }
-    .course-card h3 {
-        font-size: 1.5rem;
-    }
-   
-/* Appointment Section */
 
-.appointment-section {
-   /* background: url('https://cdn.wallpapersafari.com/66/13/xbkgOi.jpg') no-repeat center;*/
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    position: relative;
-    color: white;
-}
+        .learn-more:hover {
+            font-weight: 600;
+        }
 
-/* Dark Overlay */
-.appointment-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-}
+        .arrow-icon {
+            height: 200px;
+            margin-left: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
 
-/* Appointment Container */
-.appointment-container {
-    max-width: 1100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
+        .learn-more:hover .arrow-icon {
+            transform: translateX(30px);
+        }
 
-/* Left Side Content */
-.appointment-left {
-    flex: 1;
-    padding: 40px;
-    text-align: left;
-}
+        /*course section*/
+        .course-section {
+            background: url('https://tse1.mm.bing.net/th?id=OIP.ZbqVBJn5IqQefkP1KcxWswHaDP&pid=Api&P=0&h=180') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 200px;
+        }
 
-.appointment-left h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #eaaecf;
-}
+        .course-section-text {
 
-.appointment-left h2 span {
-    color: #87CEEB;
-}
+            text-transform: uppercase;
+            height: 70vh;
+            display: flex;
+            font-size: 100px;
 
-.appointment-left p {
-    font-size: 1.2rem;
-    margin-top: 15px;
-}
+        }
 
-.call-action {
-    margin-top: 30px;
-    font-size: 1.2rem;
-}
-
-.call-btn {
-    background: #eaaecf;
-    padding: 12px 25px;
-    border-radius: 8px;
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.call-btn:hover {
-    background: #87CEEB;
-}
-
-/* Right Side Form */
-.appointment-form-container {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 10px;
-    
-}
-
-/* Form Elements */
-.appointment-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-group {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.input-group input,
-.input-group select {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.4);
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: black; /* Ensures text color is black */
-}
-
-/* Make placeholder text black */
-.input-group input::placeholder,
-.input-group select::placeholder {
-    color: black !important;
-    opacity: 1; /* Ensures full opacity */
-}
+        .course-section::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.5);
+            filter: blur(10px);
+        }
 
 
-/* Book Button */
-.book-btn {
-    background: #eaaecf;
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 5px;
-}
+        @media (max-width: 768px) {
+            .course-section {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center
+            }
 
-.book-btn:hover {
-    background: #87CEEB;
-}
-
-    /* Scroll Animations */
-    .animated-section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease-out;
-    }
-
-    .animated-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+            .arrow-icon {
+                height: 100px;
+            }
+        }
 
 
-    /*gallery*/
-    #gallery {
-        background-color: #f8f9fa;
-        padding: 50px 0;
-    }
-    
-    .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .gallery-item:hover {
-        transform: scale(1.05);
-    }
-    
-    .gallery-item .overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        opacity: 0;
-        transform: translateY(100%);
-        transition: all 0.3s ease-in-out;
-    }
-    
-    .gallery-item:hover .overlay {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    
-/*brand*/
-.brand-section {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #1e1e1e, #292929);
-    position: relative;
-    overflow: hidden;
-    color: white;
-}
+        @media (max-width: 576px) {
 
+            .course-section-text {
+                padding: 30px;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+            }
 
+            .text-1 {
+                font-size: 3.5rem;
+            }
 
-/* Brand Slider */
-.brand-slider {
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-}
-
-/* Track - Scrolling Effect */
-.brand-track {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    animation: scroll 15s linear infinite;
-    width: calc(160px * 24); /* Adjust based on logo width */
-}
-
-/* Brand Logo */
-.brand-logo {
-    flex: 0 0 auto;
-    width: 160px; /* Adjust size */
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover Effect */
-.brand-logo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-}
-
-/* Brand Logo Image */
-.brand-logo img {
-    width: 80%;
-    height: auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-/* Remove Grayscale on Hover */
-.brand-logo:hover img {
-    filter: grayscale(0%);
-}
-
-/* Infinite Scrolling Animation */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Moves only half, so the loop is seamless */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .brand-section h2 {
-        font-size: 2rem;
-    }
-    .brand-logo {
-        width: 120px;
-        height: 70px;
-    }
-}
-
+            .text-2 {
+                font-size: 3.5rem;
+            }
+        }
     </style>
-    
 </head>
+
 <body>
-    <div class="background"></div>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="Glamourlite.png" alt="Logo" width="120"></a>
+            <a class="navbar-brand" href="#"><img src="Glamg" alt="Logo" width="120"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/salon.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/academy.html">Academy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <!-- Hero Section -->
-    <section id="home" class="hero d-flex justify-content-center align-items-center text-center">
-        <div class="hero-content">
-            <h1>Welcome to <span>Glamourlite</span></h1>
-            <p>Where beauty meets perfection.</p>
-            <a href="/services" class="call-btn">Explore Services</a>
-        </div>
-    </section>
- 
-    <!-- About Section -->
-    <section id="about" class="py-5 text-center">
+    <div class="container-fluid hero d-flex align-items-center" data-aos="zoom-in">
         <div class="container">
-            <h2>About Us</h2>
-            <p>Glamourlite Makeover Academy & Salon is dedicated to providing world-class beauty and styling education.</p>
-        </div>
-    </section>
-    <!-- Services Section -->
-    <section id="courses" class="courses">
-        <h2 data-aos="fade-up">Discover Your Art</h2>
-        <div class="course-container">
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-palette-fill"></i>
-                <h3>Makeup</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-droplet-fill"></i>
-                <h3>Chemical Works</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-patch-plus-fill"></i>
-
-                <h3>Lobe Repair</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-scissors"></i>
-                <h3>Hair Dressing</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-scissors"></i>
-                <h3>Hairstyle</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-brush-fill"></i>
-                <h3>Nail Art</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-grip-horizontal"></i>
-                <h3>Extension</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-eye-fill"></i>
-                <h3>Eyelash Extension</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-person-fill"></i>
-                <h3>Cosmetology</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-award-fill"></i>
-                <h3>Master Course</h3>
-            </div>
-            <div class="course-card" data-aos="zoom-in">
-                <i class="bi bi-hand-index-thumb"></i>
-                <h3>Mehndi</h3>
-            </div>
-        </div>
-    </section>
-    <!-- appointment section -->
-    <section id="appointment" class="appointment-section">
-        <div class="appointment-container">
-            <!-- Left Section: Engaging Visuals -->
-            <div class="appointment-left">
-                <h2 data-aos="fade-up">Let's not wait for the <span>"Perfect Look"</span></h2>
-                <p data-aos="fade-up" data-aos-delay="200">Book Your Appointment Today & Transform Your Style!</p>
-                <div class="call-action" data-aos="fade-up" data-aos-delay="400">
-                    <p>OR Call Us Now</p>
-                    <a href="tel:+180021256657" class="call-btn">1800 212 56657</a>
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-12">
+                    <div class="text-section">
+                        <h1>
+                            <span class="text-1">2025</span><br>
+                            <span class="text-2">ADMISSIONS<br>CALENDAR<br></span><span class="text-1">NOW LIVE</span>
+                            </h2>
+                            <div class="learn-more">
+                                Learn More
+                                <img src="arrow.png" alt="Arrow" class="arrow-icon">
+                            </div>
+                        </h1>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex course-section">
+        <div class="align-items-center course-section-text" data-aos="fade-right">
+            <h2>
+                <span class="text-2">discover our</span><br>
+                <span class="text-1">NEW COURSES</span>
+            </h2>
+        </div>
+        <div class="learn-more mx-5" data-aos="fade-right">
+            Learn More
+            <img src="arrow.png" alt="Arrow" class="arrow-icon">
+        </div>
+    </div>
+
+
+    <style>
+        .academy-section-text {
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            line-height: 64px;
+
+        }
+
+        /* academy Section */
+        .academy-section {
+            position: relative;
+            background: linear-gradient(45deg, #222, #111);
+            background-image: url("https://i.pinimg.com/474x/f9/4f/8d/f94f8d8ef64389c0f03a1d4707995fdd.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 90vh;
+            padding: 100px 10%;
+            overflow: hidden;
+        }
+
+        /* Blurred Bottom Effect */
+        .academy-section::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.5);
+            filter: blur(10px);
+        }
+
+        /* Academy Section Text */
+        .academy-section-text {
+
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        /* City Container */
+        .city-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* City Items */
+        .city {
+            font-size: 3rem;
+            font-weight: 300;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform-origin: left;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .city:hover {
+            transform: translateY(20px);
+            opacity: 0.8;
+        }
+
+        /* Arrow Styling */
+        .arrow {
+            font-size: 2.5rem;
+        }
+
+        /* Responsive Design (Only for tablets and mobile, keeping full screen unchanged) */
+        @media (max-width: 1024px) {
+
+            /* Tablets and smaller screens */
+            .city-container {
+                gap: 20px;
+            }
+
+            .city {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .academy-section {
+                padding: 60px 5%;
+                height: auto;
+                min-height: 100vh;
+
+            }
+
+            .academy-section-text {
+                flex-wrap: wrap;
+            }
+
+            .city-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0px;
+                padding: 0px 0px;
+            }
+
+            .city {
+                font-size: 2rem;
+                writing-mode: horizontal-tb;
+                text-orientation: unset;
+            }
+
+            .city:hover {
+                transform: translateX(20px);
+            }
+
+            .arrow {
+                font-size: 1.8rem;
+            }
+
+            .academy-section-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        .section4 {
+            position: relative;
+            background: linear-gradient(to bottom, #000000, #111111);
+            display: flex;
+            align-items: center;
+            background-image: url("https://i.pinimg.com/474x/f9/4f/8d/f94f8d8ef64389c0f03a1d4707995fdd.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .section4::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.5);
+            filter: blur(10px);
+
+        }
+
+        .section4-content {
+            position: relative;
+            top: 200px;
+            height: 100vh;
+            line-height: 30px;
+            padding: 100px 120px;
+        }
+
+        @media(max-width:576) {
+            .section4 {
+                max-width: 100vw;
+            }
+
+            .section4-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+        }
+
+        @media(max-width:576) {}
+    </style>
+
+
+    <div class="container-fluid academy-section">
+        <div class="academy-section-text container d-flex" data-aos="fade-up">
+            <div class="academy-section-title col-md-6 col-sm-12">
+                <span class="text-2"> Find </span><br> <span class="text-1">Your Makeup Academy</span>
+            </div>
+            <div class="city-container col-md-6 col-sm-12">
+                <div class="city">
+                    <span class="arrow">→</span>
+                    MUMBAI
+                </div>
+                <div class="city">
+                    <span class="arrow">→</span>
+                    BANGALORE
+                </div>
+                <div class="city">
+                    <span class="arrow">→</span>
+                    DELHI
+                </div>
+                <div class="city">
+                    <span class="arrow">→</span>
+                    KOLKATA
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid section4">
+        <div class="section4-content container py-2 px-1" data-aos="fade-left">
+            <span class="text-2 text-uppercase">Glamour<br>
+                makeup academy;</span><br><br> <span class="text-1 ">LEARNING LIKE<br>
+                NO OTHER.</span>
+        </div>
+    </div>
+    <style>
+        .find-your-dba {
+            background-color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 100px;
+            text-transform: uppercase;
+        }
+
+        .text-3 {
+            font-weight: 300;
+            font-size: 60px;
+            line-height: 1.2;
+        }
+
+        .text-4 {
+            font-weight: 400;
+            font-size: 3.5rem;
+            line-height: 48px;
+        }
+
+        .text-highlight {
+            font-weight: 700;
+        }
+
+        .image-box {
+            position: relative;
+            right: 200px;
+            width: 150px;
+            margin: 0 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-box:hover {
+            transform: scale(1.1);
+        }
+
+        .explore-btn {
+            position: relative;
+            display: flex;
+            bottom: 200px;
+            align-items: center;
+            font-size: 1.1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            transition: 0.3s;
+        }
+
+        .explore-btn:hover {
+            font-weight: 600;
+        }
+
+
+
+        .explore-btn:hover .arrow-icon {
+            transform: translateX(30px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+
+            /* Tablet */
+            .find-your-dba {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px;
+            }
+
+            .text-3 {
+                font-size: 3rem;
+
+            }
+
+            .text-4 {
+                font-size: 3rem;
+                font-weight: 500;
+            }
+
+            .image-box {
+                right: 0;
+                width: 120px;
+                height: 200px;
+
+            }
+
+            .explore-btn {
+                bottom: 0;
+                margin: 100px 0px;
+
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Mobile */
+            .find-your-dba {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .text-3 {
+                font-size: 2.5rem;
+            }
+
+            .image-box {
+                width: 100px;
+                right: 0;
+
+            }
+
+            .explore-btn {
+                position: relative;
+                top: 50px;
+                font-size: 1rem;
+                bottom: 0;
+                margin-top: 0px;
+            }
+        }
+    </style>
+
+    <section class="container-fluid ">
+        <div class=" find-your-dba container" data-aos="zoom-in">
+            <div class="heading">
+                <div><span class="text-3">Find Your <br> Best </span>
+                    <span class="text-4">Glamour</span><br><br><span class="text-3">Pro-Course </span>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex p-5">
+                    <a href="#" class="image-box">
+                        <img src="https://cdn.prod.website-files.com/657c3cbbc210fd0bbb4e66f7/66dd67ee8b7957d393218995_12monthN%20(1).webp"
+                            alt="12 Month Course">
+                    </a>
+                    <a href="#" class="image-box">
+                        <img src="https://cdn.prod.website-files.com/657c3cbbc210fd0bbb4e66f7/66dd67ee8b7957d393218995_12monthN%20(1).webp"
+                            alt="12 Week Course">
+                    </a>
+                </div>
+
+                <a href="#" class="explore-btn mx-4">
+                    Explore Pro Courses
+                    <img src="arrow.png" alt="Arrow" class="arrow-icon">
+                </a>
+            </div>
+    </section>
+
+    <!-- <style>
+            .contact-us{
+                position: relative;
+                background: linear-gradient(to bottom, #000000, #111111);
+                display: flex;
+                align-items: center;
+                background-image: url("https://i.pinimg.com/474x/f9/4f/8d/f94f8d8ef64389c0f03a1d4707995fdd.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .contact-us::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                background: rgba(0, 0, 0,);
+                filter: blur(10px);
     
-            <!-- Right Section: Form -->
-            <div class="appointment-form-container">
-                <form class="appointment-form" data-aos="fade-left">
-                    <div class="input-group">
-                        <input type="text" placeholder="Name*" required>
-                        <input type="text" placeholder="Contact*" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" placeholder="Email ID">
-                        <input type="text" placeholder="City*" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" placeholder="Location*" required>
-                        <select required>
-                            <option value="">Gender*</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <select required>
-                            <option value="">Service Type*</option>
-                            <option value="makeup">Makeup</option>
-                            <option value="hair">Hair Dressing</option>
-                            <option value="nailart">Nail Art</option>
-                            <option value="cosmetology">Cosmetology</option>
-                        </select>
-                        <input type="date" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="time" required>
-                        <select required>
-                            <option value="">AM/PM</option>
-                            <option value="am">AM</option>
-                            <option value="pm">PM</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="book-btn">Book Appointment</button>
-                </form>
+            }
+
+            .contact-us-text {
+                position: absolute;
+                height: 800px;
+                width:100vh;
+                transform: rotate(-90deg);
+                cursor: pointer;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .text-6 {
+                display: flex;
+                position: absolute;
+                top: 300px;
+               justify-content: space-between;
+               font-size: 80px;
+            
+              
+            }
+            .text-7 {
+                display: flex;
+                position: relative;
+                top: 600px;
+               justify-content: space-around;
+                align-items: center;
+                font-size: 80px;
+             
+            }
+            
+            
+        </style> -->
+
+    <!-- <section class="container-fluid contact-us text-uppercase">
+            
+               <div class="contact-us-text">
+                <h2 class="text-6">Admissions</h2>
+        
+                <h2 class="text-7">Contact us→</h2>
+               </div>
+        
+        </section> -->
+
+    <style>
+        .testimonials-section {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background: url('https://wallpaperaccess.com/full/1190980.jpg') no-repeat center;
+            background-size: cover;
+        }
+
+        /* Title Styling */
+        .testimonials-title {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-transform: uppercase;
+            font-size: 50px;
+            display: flex;
+        }
+
+        /* Instagram Feed Container */
+        .instagram-feed {
+            padding: 20px;
+            width: 350px;
+            height: 550px;
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Instagram iFrame */
+        .instagram-feed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .testimonials-section {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                background: none;
+            }
+
+            .testimonials-title {
+                writing-mode: horizontal-tb;
+                transform: none;
+                font-size: 40px;
+                margin-bottom: 20px;
+                color: #222;
+            }
+
+            .instagram-feed {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-title {
+                font-size: 30px;
+            }
+
+            .instagram-feed {
+                max-width: 350px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-title {
+                font-size: 24px;
+                text-align: center;
+            }
+
+            .instagram-feed {
+                max-width: 300px;
+                padding: 10px;
+            }
+        }
+    </style>
+
+    <section>
+        <div class="testimonials-section container" data-aos="zoom-in">
+            <div class="testimonials-title text-2">TESTIMONIALS</div>
+
+            <div class="instagram-feed">
+                <iframe src="https://youtu.be/zMM_JdmT6Ms"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        .blog-section {
+            width: 100%;
+            padding: 100px 10%;
+            position: relative;
+        }
+
+        /* Blog Header */
+        .blog-header {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-header span {
+            color: white;
+            opacity: 0.7;
+        }
+
+        .blog-header .arrow {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        /* Blog Text */
+        .blog-text {
+            max-width: 400px;
+        }
+
+        .blog-text h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .gh {
+            font-size: 40px;
+        }
+
+        /* Blog Image */
+        .blog-image-container {
+            position: relative;
+        }
+
+        .blog-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            display: flex;
+
+
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .blog-header {
+                font-size: 36px;
+            }
+
+            .blog-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-text {
+                max-width: 100%;
+            }
+
+            .gh {
+                font-size: 35px;
+            }
+
+            .blog-image {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-section {
+                padding: 60px 5%;
+            }
+
+            .blog-header {
+                font-size: 30px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-content {
+                margin-top: 20px;
+            }
+
+            .blog-text {
+                text-align: center;
+            }
+
+            .gh {
+                font-size: 28px;
+            }
+
+            .blog-image {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-header {
+                font-size: 24px;
+            }
+
+            .blog-header .arrow {
+                width: 30px;
+                height: 30px;
+            }
+
+            .gh {
+                font-size: 24px;
+            }
+
+            .blog-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+
+    <section class="blog-section" data-aos="fade-left">
+        <div class="blog-header">
+            <span class="text-2">DBA IN THE </span> <span class="text-1">Blog</span>
+            <div class="arrow">⬇</div>
+        </div>
+
+        <div class="blog-content">
+            <div class="blog-text">
+
+                <span class="text-2 gh">DBA SHINES SUSTAINABILITY FOR UNITED NATIONS</span>
+            </div>
+
+            <div class="blog-image-container" data-aos="zoom-in">
+                <div class="blog-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdlfgPe_AcOZqqIJwqHchF6k4vYJ-YRj74YA&s"
+                        alt="Fashion Model">
+                </div>
+
             </div>
         </div>
     </section>
-    <!-- brand section -->
-<section id="brands" class="brand-section">
-    <h2 data-aos="fade-up">Our Trusted Brands</h2>
-    <div class="brand-slider">
-        <div class="brand-track">
-            <!-- Original Set of 12 Brands -->
-            <div class="brand-logo"><img src="brand1.png" alt="Brand 1"></div>
-            <div class="brand-logo"><img src="brand2.png" alt="Brand 2"></div>
-            <div class="brand-logo"><img src="brand3.png" alt="Brand 3"></div>
-            <div class="brand-logo"><img src="brand4.png" alt="Brand 4"></div>
-            <div class="brand-logo"><img src="brand5.png" alt="Brand 5"></div>
-            <div class="brand-logo"><img src="brand6.png" alt="Brand 6"></div>
-            <div class="brand-logo"><img src="brand7.png" alt="Brand 7"></div>
-            <div class="brand-logo"><img src="brand8.png" alt="Brand 8"></div>
-            <div class="brand-logo"><img src="brand9.png" alt="Brand 9"></div>
-            <div class="brand-logo"><img src="brand10.png" alt="Brand 10"></div>
-            <div class="brand-logo"><img src="brand11.png" alt="Brand 11"></div>
-            <div class="brand-logo"><img src="brand12.png" alt="Brand 12"></div>
+    <style>
+        /* academy Section */
+        .career-section {
+            position: relative;
+            background: linear-gradient(45deg, #222, #111);
+            background-image: url("https://i.pinimg.com/474x/f9/4f/8d/f94f8d8ef64389c0f03a1d4707995fdd.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 90vh;
+            padding: 100px 10%;
+            overflow: hidden;
+        }
 
-          
+        /* Blurred Bottom Effect */
+        .career-section::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.5);
+            filter: blur(10px);
+        }
+
+        .career-section-content {
+            position: relative;
+
+
+        }
+    </style>
+
+    <div class="container-fluid career-section">
+        <div class="career-section-content heading" data-aos="fade-right">
+            <span class="text-2 text-uppercase"> ready for
+                <br> a </span><span class="text-1">CAREER <br>Change?</span>
+        </div>
+        <div class="learn-more" data-aos="fade-right">
+            Contact Now
+            <img src="arrow.png" alt="Arrow" class="arrow-icon">
+
+        </div>
     </div>
-</section>
 
-      <!-- Footer Section -->
-<footer class="text-center py-5" style="background: #1f1f1f; color: white;">
-    <div class="container">
-        <div class="row">
-            <!-- Brand Info -->
-            <div class="col-md-4 mb-4">
-                <h4 style="color: #eaaecf;">Glamourlite</h4>
-                <p>Enhancing beauty with professional expertise.</p>
-                <img src="Glamourlite.png" alt="Logo" width="120">
-            </div>
+    <footer class="text-center py-5" style="background:white; color:#000000">
+        <div class="container" data-aos="zoom-in">
+            <div class="row">
+                <!-- Brand Info -->
+                <div class="col-md-4">
+                    <h3 style="color: #ec4ea5;">Glamourlite</h3>
+                    <h5>Enhancing beauty with professional expertise.</h5>
+                    <img src="glamourlite-logo.png" alt="Logo" width="200">
+                </div>
 
-            <!-- Quick Links -->
-            <div class="col-md-4 mb-4">
-                <h5 style="color: #eaaecf;">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
-                    <li><a href="#about" class="text-white text-decoration-none">About</a></li>
-                    <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
-                    <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
-                </ul>
-            </div>
+                <!-- Quick Links -->
+                <div class="col-md-4">
+                    <h4 style="color:#ec4ea5;">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/glamourlite.html" class="text-decoration-none"
+                                style="font-size: 1.2rem; color:black">Home</a></li>
+                        <li><a href="/about.html" class="text-decoration-none"
+                                style="font-size: 1.2rem; color:black">About</a></li>
+                        <li><a href="/contact.html" class="text-decoration-none"
+                                style="font-size: 1.2rem; color:black">Academy</a></li>
+                        <li><a href="/services.html" class="text-decoration-none"
+                                style="font-size: 1.2rem; color:black">Services</a></li>
+                        <li><a href="/contact.html" class="text-decoration-none"
+                                style="font-size: 1.2rem; color:black">Contact</a></li>
+                    </ul>
+                </div>
 
-            <!-- Social Media -->
-            <div class="col-md-4 mb-4">
-                <h5 style="color: #eaaecf;">Follow Us</h5>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="text-white" style="font-size: 1.5rem;"><i class="bi bi-youtube"></i></a>
+                <!-- Social Media -->
+                <div class="col-md-4 mb-4">
+                    <h4 style="color:#ec4ea5;">Follow Us</h4>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#" style="font-size: 2rem"><i class="bi bi-facebook"></i></a>
+                        <a href="#" style="font-size: 2rem;"><i class="bi bi-instagram"></i></a>
+                        <a href="#" style="font-size:2rem;"><i class="bi bi-twitter"></i></a>
+                        <a href="#" style="font-size:2rem"><i class="bi bi-youtube"></i></a>
+                    </div>
                 </div>
             </div>
+            <hr style="border-color:#ec1a8e;">
+            <p class="mb-0">&copy; 2025 Glamourlite. All rights reserved.</p>
         </div>
-        <hr style="border-color: rgba(234, 174, 207, 0.5);">
-        <p class="mb-0">&copy; 2025 Glamourlite. All rights reserved.</p>
-    </div>
-</footer>
-
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
-
-     <script>
-        gsap.from(".appointment-left h2", { opacity: 0, y: -50, duration: 1, ease: "power3.out" });
-        gsap.from(".appointment-left p", { opacity: 0, y: 50, duration: 1, delay: 0.5, ease: "power3.out" });
-        gsap.from(".appointment-form", { opacity: 0, x: 100, duration: 1, delay: 0.8, ease: "power3.out" });
-        gsap.from(".book-btn", { opacity: 0, scale: 0.8, duration: 0.8, delay: 1.2, ease: "power3.out" });
-        
-        gsap.to(".brand-track", {
-            x: "-50%", 
-            duration: 12, 
-            repeat: -1, 
-            ease: "linear"
-        });
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        
-
-        
-        AOS.init();
-    </script>
+    </footer>
 </body>
+
+
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init(); // Initialize AOS animations
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
