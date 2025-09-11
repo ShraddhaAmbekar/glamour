@@ -26,10 +26,18 @@
             color: white !important;
         }
 
+        .text-1 {
+            font-weight: 400;
+            font-size: 84px;
+            line-height: 48px;
+            color: white
+        }
+
         .text-2 {
             font-weight: 200;
             font-size: 84px;
             line-height: 48px;
+            color: white
         }
 
         .navbar {
@@ -51,15 +59,6 @@
             overflow: hidden;
         }
 
-        .makeover-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);/
-        }
 
         .text-section {
             color: white;
@@ -70,19 +69,9 @@
             padding: 30px
         }
 
-        .text-1 {
-            font-weight: 400;
-            font-size: 84px;
-            line-height: 48px;
-            color: white
-        }
 
-        .text-2 {
-            font-weight: 200;
-            font-size: 84px;
-            line-height: 48px;
-            color: white
-        }
+
+
 
         .learn-more {
             display: flex;
@@ -108,9 +97,9 @@
         }
 
         /*course section*/
-        .course-section {       
+        .course-section {
             background: linear-gradient(to bottom, #0000001b);
-             background-image: url('/assets/images/fourth.png');       
+            background-image: url('/assets/images/fourth.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -133,8 +122,8 @@
 
         }
 
-       
- @media(max-width:768) {
+
+        @media(max-width:768) {
             .section1 {
                 max-width: 100vw;
             }
@@ -153,7 +142,7 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                background-image: url('/assets/images/fourthmb.png');   
+                background-image: url('/assets/images/fourthmb.png');
             }
 
             .course-section-text {
@@ -162,14 +151,13 @@
                 transform: rotate(180deg);
             }
 
-
-
             .text-1 {
-                font-size: 3rem;
+                font-size: 48px;
+                color: white
             }
 
             .text-2 {
-                font-size: 3.5rem;
+                font-size: 48px;
             }
 
             .arrow-icon {
@@ -183,12 +171,13 @@
 
 
             }
-              .text-section {
-          
-            font-size: 48px;        
-            padding: 10px
-        }
-        
+
+            .text-section {
+
+                font-size: 48px;
+                padding: 10px
+            }
+
         }
     </style>
 
@@ -235,7 +224,6 @@
         }
 
         /* Responsive Design (Only for tablets and mobile, keeping full screen unchanged) */
-      
     </style>
     <style>
         .section1 {
@@ -246,8 +234,9 @@
             background-image: url("/assets/images/banner.png");
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-position: 65% 10px;
             width: 100vw;
+            height: auto;
             color: white
         }
 
@@ -256,11 +245,10 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 100%;
+            width: 100vw;
             height: 80px;
             background: rgba(0, 0, 0, 0.5);
             filter: blur(10px);
-
         }
 
         .section1-content {
@@ -322,7 +310,8 @@
                 min-height: 100vh;
             }
         }
-          @media (max-width: 1024px) {
+
+        @media (max-width: 1024px) {
 
             /* Tablets and smaller screens */
             .city-container {
