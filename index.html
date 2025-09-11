@@ -23,23 +23,35 @@
         body {
             font-family: 'Roboto', sans-serif;
             background: black;
-            color: white;
+            color: white !important;
+        }
+
+        .text-2 {
+            font-weight: 200;
+            font-size: 84px;
+            line-height: 48px;
         }
 
         .navbar {
             background-color: rgb(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            width: 100vw;
         }
 
-        .makeover {
-            height: 100vh;
-            background: url("/assets/images/third.png") no-repeat center center/cover;
+
+        .makeover-section {
             position: relative;
-            display: flex;
-            align-items: center;
-            padding: 60px 0px;
+            background: linear-gradient(45deg, #222, #111);
+            background-image: url("/assets/images/third.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+            height: 90vh;
+            padding: 100px 10%;
+            overflow: hidden;
         }
 
-        .makeover::before {
+        .makeover-section::before {
             content: "";
             position: absolute;
             top: 0;
@@ -62,12 +74,14 @@
             font-weight: 400;
             font-size: 84px;
             line-height: 48px;
+            color: white
         }
 
         .text-2 {
             font-weight: 200;
             font-size: 84px;
             line-height: 48px;
+            color: white
         }
 
         .learn-more {
@@ -94,21 +108,24 @@
         }
 
         /*course section*/
-        .course-section {
-            background: url('/assets/images/fourth.png') no-repeat center center/cover;
+        .course-section {       
+            background: linear-gradient(to bottom, #0000001b);
+             background-image: url('/assets/images/fourth.png');       
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             color: #fff;
             position: relative;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: space-between;
             align-items: center;
             overflow: hidden;
-            padding: 0 200px;
+            padding: 0 180px;
         }
 
         .course-section-text {
-
             text-transform: uppercase;
             height: 70vh;
             display: flex;
@@ -116,33 +133,28 @@
 
         }
 
-        .course-section::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(0, 0, 0, 0.5);
-            filter: blur(10px);
-        }
+       
+ @media(max-width:768) {
+            .section1 {
+                max-width: 100vw;
+            }
 
+            .section1-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+        }
 
         @media (max-width: 768px) {
             .course-section {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                text-align: center
+                text-align: center;
+                background-image: url('/assets/images/fourthmb.png');   
             }
-
-            .arrow-icon {
-                height: 100px;
-            }
-        }
-
-
-        @media (max-width: 576px) {
 
             .course-section-text {
                 padding: 30px;
@@ -150,55 +162,37 @@
                 transform: rotate(180deg);
             }
 
+
+
             .text-1 {
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
 
             .text-2 {
                 font-size: 3.5rem;
             }
+
+            .arrow-icon {
+                height: 100px;
+            }
+
+            .makeover-section {
+                background-image: url("/assets/images/thirdmb.png");
+                background-position: center;
+
+
+
+            }
+              .text-section {
+          
+            font-size: 48px;        
+            padding: 10px
+        }
+        
         }
     </style>
 
-       <style>
-        .academy-section-text {
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 20px;
-            position: relative;
-            line-height: 64px;
-
-        }
-
-        /* academy Section */
-        .academy-section {
-            position: relative;
-            background: linear-gradient(45deg, #222, #111);
-            background-image: url('/assets/images/second.png');
-            background-size: cover;
-       
-            background-repeat: no-repeat;
-            height: 90vh;
-            padding: 100px 10%;
-            overflow: hidden;
-        }
-
-        /* Blurred Bottom Effect */
-        .academy-section::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(0, 0, 0, 0.5);
-            filter: blur(10px);
-        }
-
+    <style>
         /* Academy Section Text */
         .academy-section-text {
 
@@ -224,9 +218,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            transform-origin: left;
             writing-mode: vertical-rl;
-            text-orientation: mixed;
             cursor: pointer;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
@@ -243,64 +235,20 @@
         }
 
         /* Responsive Design (Only for tablets and mobile, keeping full screen unchanged) */
-        @media (max-width: 1024px) {
-
-            /* Tablets and smaller screens */
-            .city-container {
-                gap: 20px;
-            }
-
-            .city {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .academy-section {
-                padding: 60px 5%;
-                height: auto;
-                min-height: 100vh;
-
-            }
-
-            .academy-section-text {
-                flex-wrap: wrap;
-            }
-
-            .city-container {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0px;
-                padding: 0px 0px;
-            }
-
-            .city {
-                font-size: 2rem;
-                writing-mode: horizontal-tb;
-                text-orientation: unset;
-            }
-
-            .city:hover {
-                transform: translateX(20px);
-            }
-
-            .arrow {
-                font-size: 1.8rem;
-            }
-
-            .academy-section-text {
-                font-size: 1.5rem;
-            }
-        }
-
+      
+    </style>
+    <style>
         .section1 {
             position: relative;
             background: linear-gradient(to bottom, #000000, #111111);
             display: flex;
             align-items: center;
-            background-image: url("/Glamourlite/banner.png");
+            background-image: url("/assets/images/banner.png");
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
+            width: 100vw;
+            color: white
         }
 
         .section1::after {
@@ -323,7 +271,46 @@
             padding: 60px 120px;
         }
 
-        @media(max-width:576) {
+
+
+        /* academy Section */
+        .academy-section {
+            position: relative;
+            min-height: 80vh;
+            ;
+            background: linear-gradient(45deg, #222, #111);
+            background-image: url('/assets/images/second.png');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            padding: 150px 10%;
+            overflow: hidden;
+        }
+
+        /* Blurred Bottom Effect */
+        .academy-section::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.5);
+            filter: blur(10px);
+        }
+
+        .academy-section-text {
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            line-height: 64px;
+        }
+
+
+        @media(max-width:768) {
             .section1 {
                 max-width: 100vw;
             }
@@ -335,9 +322,57 @@
                 min-height: 100vh;
             }
         }
+          @media (max-width: 1024px) {
 
-       
-    </style>  
+            /* Tablets and smaller screens */
+            .city-container {
+                gap: 20px;
+            }
+
+            .city {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .academy-section {
+                padding: 60px 5%;
+                height: auto;
+                min-height: 100vh;
+                width: 100vw;
+                background-image: url('/assets/images/secondmb.png');
+                background-size: cover;
+                background-position: center;
+
+            }
+
+            .academy-section-text {
+                flex-wrap: wrap;
+            }
+
+            .city-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0px;
+                padding: 0px 0px;
+            }
+
+            .city {
+                font-size: 2rem;
+
+            }
+
+
+
+            .arrow {
+                font-size: 1.8rem;
+            }
+
+            .academy-section-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
     <style>
         .find-your-dba {
             background-color: #000000;
@@ -490,12 +525,12 @@
         <div class="section1-content container py-2 px-1" data-aos="zoom-in">
             <span class="text-2 text-uppercase">BRUSH UP<br>
                 YOUR SKILLS</span><br><br> <span class="text-1 ">AT GLAMOURLITE<br>
-                ACADEMY </span><br/><span class="text-white text-end">(Now in Rishikesh)</span>
+                ACADEMY </span><br /><span class="text-white text-end">(Now in Rishikesh)</span>
         </div>
     </div>
 
 
-       <div class="container-fluid academy-section">
+    <div class="container-fluid academy-section">
         <div class="academy-section-text container d-flex" data-aos="fade-up">
             <div class="academy-section-title col-md-6 col-sm-12">
                 <span class="text-2"> Step Into Our </span><br> <span class="text-1">Makeup Academy</span>
@@ -516,14 +551,14 @@
                 </div>
                 <div class="city">
                     <a href="about.html"> <span class="arrow">→</span>
-                    MORE</a>
+                        MORE</a>
                 </div>
             </div>
         </div>
     </div>
 
-    
-    <div class="container-fluid makeover d-flex align-items-center" data-aos="fade-left">
+
+    <div class="container-fluid makeover-section" data-aos="fade-left">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-12">
@@ -533,7 +568,7 @@
                             <span class="text-2">MAKEOVER <br>ZONE<br></span><span class="text-1">-GLAM LIST</span>
                             </h2>
                             <div class="learn-more">
-                                <a href="about.html">Learn More</a> 
+                                <a href="about.html">Learn More</a>
                                 <img src="arrow.png" alt="Arrow" class="arrow-icon">
                             </div>
                         </h1>
@@ -553,7 +588,7 @@
             </h2>
         </div>
         <div class="learn-more mx-5" data-aos="fade-right">
-            <a href="academy.html">Discover More</a> 
+            <a href="academy.html">Discover More</a>
             <img src="arrow.png" alt="Arrow" class="arrow-icon">
         </div>
     </div>
@@ -562,7 +597,7 @@
     <section class="container-fluid ">
         <div class=" find-your-dba container" data-aos="zoom-in">
             <div class="heading">
-                <div><span class="text-3">Our<br>  </span>
+                <div><span class="text-3">Our<br> </span>
                     <span class="text-4">Course</span><br><br><span class="text-3">Packages</span>
                 </div>
             </div>
@@ -585,7 +620,7 @@
             </div>
     </section>
 
-   
+
     <style>
         .testimonials-section {
             position: relative;
@@ -863,12 +898,13 @@
             </div>
         </div> 
     </section> -->
-    
+
     <style>
-        a{
+        a {
             text-decoration: none;
-            color:white
+            color: white
         }
+
         /* academy Section */
         .career-section {
             position: relative;
@@ -902,11 +938,11 @@
 
     <div class="container-fluid career-section">
         <div class="career-section-content heading" data-aos="zoom-in">
-            <span class="text-2 text-uppercase"> Your  makeup career
-                </span><br/><span class="text-1">starts with One Click</span>
+            <span class="text-2 text-uppercase"> Your makeup career
+            </span><br /><span class="text-1">starts with One Click</span>
         </div>
         <div class="learn-more" data-aos="fade-right">
-           <a href="contact.html"> Contact Now</a>
+            <a href="contact.html"> Contact Now</a>
             <img src="arrow.png" alt="Arrow" class="arrow-icon">
 
         </div>
