@@ -26,6 +26,12 @@
             color: white !important;
         }
 
+         .navbar {
+            background-color: rgb(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            width: 100vw;
+        }
+
         .text-1 {
             font-weight: 400;
             font-size: 84px;
@@ -40,38 +46,7 @@
             color: white
         }
 
-        .navbar {
-            background-color: rgb(0, 0, 0, 0.8);
-            padding: 15px 20px;
-            width: 100vw;
-        }
-
-
-        .makeover-section {
-            position: relative;
-            background: linear-gradient(45deg, #222, #111);
-            background-image: url("/assets/images/third.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: right;
-            height: 90vh;
-            padding: 100px 10%;
-            overflow: hidden;
-        }
-
-
-        .text-section {
-            color: white;
-            position: relative;
-            font-size: 84px;
-            font-weight: 500;
-            line-height: 64px;
-            padding: 30px
-        }
-
-
-
-
+       
 
         .learn-more {
             display: flex;
@@ -96,64 +71,14 @@
             transform: translateX(30px);
         }
 
-        /*course section*/
-        .course-section {
-            background: linear-gradient(to bottom, #0000001b);
-            background-image: url('/assets/images/fourth.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            overflow: hidden;
-            padding: 0 180px;
-        }
-
-        .course-section-text {
-            text-transform: uppercase;
-            height: 70vh;
-            display: flex;
-            font-size: 100px;
-
-        }
-
-
-        @media(max-width:768) {
-            .section1 {
-                max-width: 100vw;
-            }
-
-            .section1-content {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-            }
-        }
+       
 
         @media (max-width: 768px) {
-            .course-section {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                background-image: url('/assets/images/fourthmb.png');
-            }
-
-            .course-section-text {
-                padding: 30px;
-                writing-mode: vertical-rl;
-                transform: rotate(180deg);
-            }
-
+           
             .text-1 {
                 font-size: 48px;
-                color: white
+                color: white;
+
             }
 
             .text-2 {
@@ -164,19 +89,8 @@
                 height: 100px;
             }
 
-            .makeover-section {
-                background-image: url("/assets/images/thirdmb.png");
-                background-position: center;
 
-
-
-            }
-
-            .text-section {
-
-                font-size: 48px;
-                padding: 10px
-            }
+        
 
         }
     </style>
@@ -184,9 +98,7 @@
     <style>
         /* Academy Section Text */
         .academy-section-text {
-
             color: #fff;
-            font-size: 2rem;
             font-weight: 500;
         }
 
@@ -259,6 +171,18 @@
             padding: 60px 120px;
         }
 
+        @media(max-width:768) {
+            .section1 {
+                max-width: 100vw;
+            }
+
+            .section1-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 90vh;
+            }
+        }
 
 
         /* academy Section */
@@ -294,35 +218,49 @@
             align-items: center;
             gap: 20px;
             position: relative;
-            line-height: 64px;
+
         }
 
 
-        @media(max-width:768) {
-            .section1 {
-                max-width: 100vw;
-            }
-
-            .section1-content {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-            }
+         /*course section*/
+        .course-section {
+            background: linear-gradient(to bottom, #0000001b);
+            background-image: url('/assets/images/fourth.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            padding: 0 180px;
         }
 
-        @media (max-width: 1024px) {
+        .course-section-text {
+            text-transform: uppercase;
+            height: 70vh;
+            display: flex;
+            font-size: 100px;
 
-            /* Tablets and smaller screens */
-            .city-container {
-                gap: 20px;
-            }
-
-            .city {
-                font-size: 2.5rem;
-            }
         }
 
+        .makeover-section {
+            position: relative;
+            background: linear-gradient(45deg, #222, #111);
+            background-image: url("/assets/images/third.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+            height: 90vh;
+            padding: 150px 10%;
+            overflow: hidden;
+        }
+
+       
         @media (max-width: 768px) {
             .academy-section {
                 padding: 60px 5%;
@@ -342,24 +280,40 @@
             .city-container {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 0px;
+                gap: 20px;
                 padding: 0px 0px;
             }
 
             .city {
-                font-size: 2rem;
+                font-size: 2.2rem;
 
             }
 
 
 
+            .makeover-section {
+                background-image: url("/assets/images/thirdmb.png");
+                background-position: center;
+                padding: 60px 5%;
+            }
             .arrow {
                 font-size: 1.8rem;
             }
-
-            .academy-section-text {
-                font-size: 1.5rem;
+             .course-section {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-image: url('/assets/images/fourthmb.png');
             }
+
+            .course-section-text {
+                padding: 30px;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+            }
+
+
         }
     </style>
     <style>
@@ -866,27 +820,6 @@
         }
     </style>
 
-    <!-- <section class="blog-section" data-aos="fade-left">
-        <div class="blog-header">
-            <span class="text-2">DBA IN THE </span> <span class="text-1">Blog</span>
-            <div class="arrow">⬇</div>
-        </div>
-
-         <div class="blog-content">
-            <div class="blog-text">
-
-                <span class="text-2 gh">DBA SHINES SUSTAINABILITY FOR UNITED NATIONS</span>
-            </div>
-
-            <div class="blog-image-container" data-aos="zoom-in">
-                <div class="blog-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdlfgPe_AcOZqqIJwqHchF6k4vYJ-YRj74YA&s"
-                        alt="Fashion Model">
-                </div>
-
-            </div>
-        </div> 
-    </section> -->
 
     <style>
         a {
