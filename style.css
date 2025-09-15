@@ -1,0 +1,74 @@
+
+/* index.css */
+
+.navbar {
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.nav-item {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: black;
+    color: white !important;
+}
+
+
+.text-1 {
+    font-weight: 400;
+    font-size: 84px;
+    line-height: 50px;
+    color: white
+}
+
+.text-2 {
+    font-weight: 200;
+    font-size: 84px;
+    line-height: 48px;
+    color: white
+}
+
+.arrow {
+    font-size: 2.5rem;
+}
+
+.learn-more {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 0px;
+    text-transform: uppercase;
+}
+
+.learn-more:hover {
+    font-weight: 600;
+}
+
+.arrow-icon {
+    height: 200px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.learn-more:hover .arrow-icon {
+    transform: translateX(30px);
+}
