@@ -1,19 +1,4 @@
-
 /* index.css */
-
-.navbar {
-    background-color: rgb(0, 0, 0, 0.8);
-    padding: 15px 20px;
-    width: 100%;
-    overflow: hidden;
-}
-
-
-.nav-item {
-    font-size: 30px;
-    font-weight: 200;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -25,25 +10,81 @@ body {
     overflow-x: hidden;
 }
 
+
 body {
     font-family: 'Roboto', sans-serif;
     background: black;
     color: white !important;
+    font-weight: 300;
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 200;
 }
 
 
+.nav-item {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+
+.footer-link {
+    font-size: 2rem;
+    font-weight: 200;
+    text-decoration: none
+}
+
+.quote {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+
+}
+
+   a {
+            text-decoration: none;
+            color: #111111
+        }
+
 .text-1 {
     font-weight: 400;
-    font-size: 84px;
-    line-height: 50px;
-    color: white
+    font-size: 82px;
+    line-height: 64px;
+    color: white;
+
 }
 
 .text-2 {
     font-weight: 200;
-    font-size: 84px;
+    font-size: 82px;
+    line-height: 64px;
+    color: white;
+
+}
+
+
+.text-3 {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+.text-4 {
+    font-weight: 400;
+    font-size: 3.5rem;
     line-height: 48px;
-    color: white
 }
 
 .arrow {
@@ -69,6 +110,27 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+
 .learn-more:hover .arrow-icon {
     transform: translateX(30px);
+}
+
+@media (max-width: 768px) {
+
+    .text-1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .text-2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+     .arrow {
+                font-size: 1.8rem;
+            }
+    .arrow-icon {
+        height: 100px;
+    }
 }
