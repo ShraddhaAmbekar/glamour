@@ -95,7 +95,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: right;
-            height: 90vh;
+            height: 100vh;
             padding: 150px 10%;
             overflow: hidden;
         }
@@ -155,9 +155,7 @@
 
         @media (max-width: 768px) {
 
-            .arrow-icon {
-                height: 100px;
-            }
+          
 
 
             .section1-content {
@@ -205,7 +203,7 @@
                 padding: 60px 5%;
             }
 
-           
+
 
             .course-section {
                 flex-direction: column;
@@ -232,15 +230,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 60px 100px;
+            padding: 60px 80px;
             text-transform: uppercase;
         }
 
-     
 
-        .text-highlight {
-            font-weight: 700;
-        }
+
+        
 
         .image-box {
             position: relative;
@@ -324,9 +320,7 @@
                 text-align: center;
             }
 
-            .text-3 {
-                font-size: 2.5rem;
-            }
+            
 
             .image-box {
                 width: 100px;
@@ -402,10 +396,24 @@
             border-radius: 10px;
         }
 
-
-
-        /* Responsive Design */
+        /* Responsive Styles */
         @media (max-width: 1024px) {
+
+            /* Tablet */
+            .find-your-dba {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px;
+            }
+
+
+            .image-box {
+                right: 0;
+                width: 120px;
+                height: 200px;
+
+            }
+
             .testimonials-section {
                 flex-direction: column;
                 height: auto;
@@ -426,9 +434,27 @@
                 max-width: 400px;
                 height: auto;
             }
+
+
         }
 
         @media (max-width: 768px) {
+
+            /* Mobile */
+            .find-your-dba {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+
+
+            .image-box {
+                width: 100px;
+                right: 0;
+
+            }
+
             .testimonials-title {
                 font-size: 30px;
             }
@@ -437,7 +463,9 @@
                 max-width: 350px;
                 padding: 15px;
             }
+
         }
+
 
         @media (max-width: 480px) {
             .testimonials-title {
@@ -451,142 +479,7 @@
             }
         }
     </style>
-
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="/assets/images/nav-logo.png" alt="Logo" width="120"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/academy.html">Academy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container-fluid section1">
-        <div class="section1-content container py-2 px-1" data-aos="zoom-in">
-            <span class="text-2 text-uppercase">BRUSH UP<br>
-                YOUR SKILLS</span><br><br> <span class="text-1 ">AT GLAMOURLITE<br>
-                ACADEMY </span><br /><span class="text-white text-end">(Now in Rishikesh)</span>
-        </div>
-    </div>
-
-
-    <div class="container-fluid academy-section">
-        <div class="academy-section-text container d-flex" data-aos="fade-up">
-            <div class="academy-section-title col-md-6 col-sm-12">
-                <span class="text-2"> Step Into Our </span><br /><br /><span class="text-1">Makeup Academy</span>
-                <br /><br />
-            </div>
-            <div class="city-container col-md-6 col-sm-12">
-                <div class="city">
-                    <span class="arrow">→</span>
-                    MAKEUP
-                </div>
-                <div class="city">
-                    <span class="arrow">→</span>
-                    NAILS
-                </div>
-                <div class="city">
-                    <span class="arrow">→</span>
-                    HAIRS
-                </div>
-                <div class="city">
-                    <a href="about.html"> <span class="arrow">→</span>
-                        MORE</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container-fluid makeover-section" data-aos="fade-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8 col-12">
-                    <div class="text-section">
-                        <h1>
-                            <span class="text-1">THE</span><br>
-                            <span class="text-2">MAKEOVER <br>ZONE<br></span><span class="text-1">-GLAM LIST</span>
-                            </h2>
-                            <div class="learn-more">
-                                <a href="about.html">Learn More</a>
-                                <img src="arrow.png" alt="Arrow" class="arrow-icon">
-                            </div>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container-fluid d-flex course-section">
-        <div class="align-items-center course-section-text" data-aos="fade-right">
-            <h2>
-                <span class="text-2">FreeLancing Services </span><br />
-                <span class="text-1">NOW IN Rishikesh</span>
-            </h2>
-        </div>
-        <div class="learn-more mx-5" data-aos="fade-right">
-            <a href="academy.html">Discover More</a>
-            <img src="arrow.png" alt="Arrow" class="arrow-icon">
-        </div>
-    </div>
-
-
-    <section class="container-fluid ">
-        <div class=" find-your-dba container" data-aos="zoom-in">
-            <div class="heading">
-                <div><span class="text-3">Our<br> </span>
-                    <span class="text-4">Course</span><br><br><span class="text-3">Packages</span>
-                </div>
-            </div>
-            <div>
-                <div class="d-flex p-5">
-                    <a href="#" class="image-box">
-                        <img src="https://cdn.prod.website-files.com/657c3cbbc210fd0bbb4e66f7/66dd67ee8b7957d393218995_12monthN%20(1).webp"
-                            alt="12 Month Course">
-                    </a>
-                    <a href="#" class="image-box">
-                        <img src="https://cdn.prod.website-files.com/657c3cbbc210fd0bbb4e66f7/66dd67ee8b7957d393218995_12monthN%20(1).webp"
-                            alt="12 Week Course">
-                    </a>
-                </div>
-
-                <a href="academy.html" class="explore-btn mx-4">
-                    Explore Pro Courses
-                    <img src="arrow.png" alt="Arrow" class="arrow-icon">
-                </a>
-            </div>
-    </section>
-
-
-  
-
-    <section>
-        <div class="testimonials-section container mb-5" data-aos="zoom-in">
-            <div class="testimonials-title text-2">TESTIMONIALS</div>
-
-            <div class="instagram-feed">
-                <iframe src="https://youtu.be/zMM_JdmT6Ms"></iframe>
-            </div>
-
-        </div>
-    </section>
-
-    <style>
+   <style>
         .blog-section {
             width: 100%;
             padding: 100px 10%;
@@ -738,10 +631,7 @@
 
 
     <style>
-        a {
-            text-decoration: none;
-            color: white
-        }
+      
 
         /* academy Section */
         .career-section {
@@ -783,6 +673,142 @@
             }
         }
     </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/assets/images/nav-logo.png" alt="Logo"  class="img-fluid" width="100"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/academy.html">Academy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid section1">
+        <div class="section1-content container py-2 px-1" data-aos="zoom-in">
+            <span class="text-2 text-uppercase">BRUSH UP<br>
+                YOUR SKILLS</span><br><br> <span class="text-1 ">AT GLAMOURLITE<br>
+                ACADEMY </span><br /><span class="text-white text-end">(Now in Rishikesh)</span>
+        </div>
+    </div>
+
+
+    <div class="container-fluid academy-section">
+        <div class="academy-section-text container d-flex" data-aos="fade-up">
+            <div class="academy-section-title col-md-6 col-sm-12">
+                <span class="text-2"> Step Into Our </span><br /><br /><span class="text-1">Makeup Academy</span>
+                <br /><br />
+            </div>
+            <div class="city-container col-md-6 col-sm-12">
+                <div class="city">
+                    <span class="arrow">→</span>
+                    MAKEUP
+                </div>
+                <div class="city">
+                    <span class="arrow">→</span>
+                    NAILS
+                </div>
+                <div class="city">
+                    <span class="arrow">→</span>
+                    HAIRS
+                </div>
+                <div class="city">
+                    <a href="about.html" class="text-white"> <span class="arrow">→</span>
+                        MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid makeover-section" data-aos="fade-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-12">
+                    <div class="text-section">
+                        <h1>
+                            <span class="text-1">THE</span><br>
+                            <span class="text-2">MAKEOVER <br>ZONE<br></span><span class="text-1">-GLAM LIST</span>
+                            </h2>
+                            <div class="learn-more">
+                                <a href="about.html" class="text-white">Learn More</a>
+                                <img src="arrow.png" alt="Arrow" class="arrow-icon" class="img-fluid">
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid d-flex course-section">
+        <div class="align-items-center course-section-text" data-aos="fade-right">
+            <h2>
+                <span class="text-2">FreeLancing Services </span><br />
+                <span class="text-1">NOW IN Rishikesh</span>
+            </h2>
+        </div>
+        <div class="learn-more mx-5" data-aos="fade-right">
+            <a href="academy.html" class="text-white">Discover More</a>
+            <img src="arrow.png" alt="Arrow" class="arrow-icon" class="img-fluid">
+        </div>
+    </div>
+
+
+    <section class="container-fluid ">
+        <div class=" find-your-dba container" data-aos="zoom-in">
+            <div class="heading">
+                <div><span class="text-3">Our<br> </span>
+                    <span class="text-4">Course</span><br><br>
+                    <span class="text-3">Packages</span>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex p-5">
+                    <a href="#" class="image-box">
+                        <img src="https://cdn.prod.website-files.com/657c3cbbc210fd0bbb4e66f7/66dd67ee8b7957d393218995_12monthN%20(1).webp"
+                            alt="12 Month Course" class="img-fluid">
+                    </a>
+                    <a href="#" class="image-box">
+                        <img src="https://cdn.prod.website-files.com/657c3cbbc210fd0bbb4e66f7/66dd67ee8b7957d393218995_12monthN%20(1).webp"
+                            alt="12 Week Course" class="img-fluid">
+                    </a>
+                </div>
+
+                <a href="academy.html" class="explore-btn mx-4 text-white">
+                    Explore Pro Courses
+                    <img src="arrow.png" alt="Arrow" class="arrow-icon" class="img-fluid">
+                </a>
+            </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="testimonials-section container mb-5" data-aos="zoom-in">
+            <div class="testimonials-title text-2">TESTIMONIALS</div>
+
+            <div class="instagram-feed">
+                <iframe src="https://youtu.be/zMM_JdmT6Ms"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+ 
 
     <div class="container-fluid career-section">
         <div class="career-section-content heading" data-aos="zoom-in">
@@ -790,7 +816,7 @@
             </span><br /><span class="text-1">starts with One Click</span>
         </div>
         <div class="learn-more" data-aos="fade-right">
-            <a href="contact.html"> Contact Now</a>
+            <a href="contact.html" class="text-white"> Contact Now</a>
             <img src="arrow.png" alt="Arrow" class="arrow-icon">
 
         </div>
@@ -833,21 +859,21 @@
             <p class="mb-0 text-black">&copy; 2025 Glamourlite. All rights reserved.</p>
         </div>
     </footer>
-</body>
 
 
 
 
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init(); // Initialize AOS animations
-</script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS animations
+    </script>
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
