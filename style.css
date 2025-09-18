@@ -64,6 +64,10 @@ footer {
 
 }
 
+.overlay {
+    background: rgba(0,0,0,0.4);
+}
+
 a {
     text-decoration: none;
     color: #111111
@@ -79,7 +83,7 @@ a {
 
 .text-2 {
     font-weight: 200;
-    font-size: 82px;
+    font-size: 80px;
     line-height: 64px;
     color: white;
 
